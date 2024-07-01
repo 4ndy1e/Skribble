@@ -1,0 +1,24 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.sketch-container {
+  background-color: #add8e6;
+  width: 800px;
+  height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.pixel {
+  box-sizing: border-box;
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  padding: 0px;
+  margin: 0px;
+}

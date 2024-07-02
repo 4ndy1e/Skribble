@@ -11,10 +11,11 @@
   height: 800px;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
   align-content: flex-start;
 }
 
-.pixel {
+.square {
   box-sizing: border-box;
   border: 1px solid black;
   width: 50px;

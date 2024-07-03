@@ -9,10 +9,15 @@ console.log(height);
 
 // create first column 
 let column = document.createElement("div");
-let squaresTotal = 16;
+let squaresTotal = 16; // user promted 
+
+let squareWidthHeight = width / squaresTotal;
+console.log(squareWidthHeight);
 
 for(let i = 0; i < squaresTotal; i++) {
   let square = document.createElement("div");
+  square.style.width = `${squareWidthHeight}px`;
+  square.style.height = `${squareWidthHeight}px`;
   square.classList.add("square");
   column.appendChild(square);
 }

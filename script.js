@@ -1,10 +1,11 @@
 // sketch container elements
 const sketchContainer = document.querySelector(".sketch-container");
-const width = sketchContainer.offsetWidth;
-const height = sketchContainer.offsetHeight;
+let width = sketchContainer.offsetWidth;
+let height = sketchContainer.offsetHeight;
+console.log(width);
+console.log(height);
 
 // generate pixels 
-let column = document.createElement("div");
 let squaresTotal = 64;
 
 // generate pixels 
@@ -59,16 +60,19 @@ pixel.forEach(square => {
 // pixels count
 const slider = document.querySelector("#slider");
   let sliderValue;
-
+const pixels = document.querySelector("#pixels");
+let pixelsCount; 
 
 slider.addEventListener("mouseup", () => {
   squaresTotal = slider.value;
 
   // Remove all child elements of the sketchContainer
   sketchContainer.replaceChildren();
+  pixelsCount = slider.value;
 
   // Generate pixels with the new slider value
   generatePixels();
+  pixels.textContent = `${pixelsCount}px`
 });
 
 

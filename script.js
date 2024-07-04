@@ -3,26 +3,33 @@ const sketchContainer = document.querySelector(".sketch-container");
 const width = sketchContainer.offsetWidth;
 const height = sketchContainer.offsetHeight;
 
-// create first column 
+// generate pixels 
 let column = document.createElement("div");
-let squaresTotal = 16; // user promted 
+let squaresTotal = 64;
 
-let squareWidthHeight = width / squaresTotal;
+// generate pixels 
+function generatePixels() {
+  let squareWidthHeight = width / squaresTotal;
+  console.log("WIDTH: " + squareWidthHeight);
 
-for(let i = 0; i < squaresTotal; i++) {
-  let square = document.createElement("div");
-  square.style.width = `${squareWidthHeight}px`;
-  square.style.height = `${squareWidthHeight}px`;
-  square.classList.add("square");
+  // Create and append squares to the container
+  for(let i = 0; i < squaresTotal * squaresTotal; i++) {
+    let square = document.createElement("div");
 
-  column.appendChild(square);
+    square.style.width = `${squareWidthHeight}px`;
+    square.style.height = `${squareWidthHeight}px`;
+    square.classList.add("square");
+
+    square.addEventListener("mouseover", () => {
+      if(leftClick == true) { square.style.backgroundColor = "black";}
+    });
+
+    sketchContainer.appendChild(square);
+  }
 }
 
-// clone first column and repeat until end of container 
-for(let i = 0; i < squaresTotal; i++) {
-  let cloneColumn = column.cloneNode(true);
-  sketchContainer.appendChild(cloneColumn);
-}
+// initial generation
+generatePixels();
 
 // detect left click
 let leftClick = false; 
@@ -48,4 +55,20 @@ pixel.forEach(square => {
     }
   });
 });
+
+// pixels count
+const slider = document.querySelector("#slider");
+  let sliderValue;
+
+
+slider.addEventListener("mouseup", () => {
+  squaresTotal = slider.value;
+
+  // Remove all child elements of the sketchContainer
+  sketchContainer.replaceChildren();
+
+  // Generate pixels with the new slider value
+  generatePixels();
+});
+
 

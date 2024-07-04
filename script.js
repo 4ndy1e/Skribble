@@ -3,9 +3,11 @@ const sketchContainer = document.querySelector(".sketch-container");
 const width = sketchContainer.offsetWidth;
 const height = sketchContainer.offsetHeight;
 
+
+
 // create first column 
 let column = document.createElement("div");
-let squaresTotal = 4; // user promted 
+let squaresTotal = 64; // user promted 
 
 let squareWidthHeight = width / squaresTotal;
 
@@ -24,18 +26,25 @@ for(let i = 0; i < squaresTotal; i++) {
   sketchContainer.appendChild(cloneColumn);
 }
 
+// detect left click
+let leftClick = false; 
+sketchContainer.addEventListener("mousedown", () => {
+  leftClick = true;
+  console.log(leftClick);
+});
+sketchContainer.addEventListener("mouseup", () => {
+  leftClick = false;
+  console.log(leftClick);
+});
+
+// create drawing effect 
 const pixel = document.querySelectorAll(".square");
 
 pixel.forEach(square => {
   square.addEventListener("mouseover", () => {
-    console.log("over");
-  });
-  square.addEventListener("mousedown", () => {
-    console.log("down");
-    square.style.backgroundColor = "yellow";
-  });
-  square.addEventListener("mouseup", () => {
-    console.log("up");
+    if(leftClick == true) {
+      square.style.backgroundColor = "yellow";
+    }
   });
 });
 

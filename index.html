@@ -29,9 +29,8 @@
         <p class="description">is an online drawing tool and platform.</p>
         <p>
           Enjoy a smooth and responsive drawing interface that lets you
-          effortlessly create and modify your artwork. Simply click to draw and
-          drag to paint, with options to adjust colors and tools to enhance your
-          creations.
+          effortlessly create and modify your artwork. Simply click and drag to
+          draw, with options to adjust colors and tools to adjust canvas.
         </p>
       </div>
       <div class="container">
@@ -41,9 +40,36 @@
         <!-- UI options -->
         <div class="options">
           <div style="display: flex; flex-direction: column">
-            <input type="range" min="1" max="100" value="64" id="slider" />
+            <input
+              type="range"
+              min="1"
+              max="100"
+              value="64"
+              id="slider"
+              class="slider"
+            />
             <p style="text-align: center; margin: 5px" id="pixels">64px</p>
           </div>
+          <div class="colors" id="colors">
+            <div class="colorSquare" style="background-color: black"></div>
+  
+            <div class="colorSquare" style="background-color: red"></div>
+            <div class="colorSquare" style="background-color: orange"></div>
+            <div class="colorSquare" style="background-color: yellow"></div>
+            <div class="colorSquare" style="background-color: #23d300"></div>
+            <div class="colorSquare" style="background-color: #0080ff"></div>
+            <div class="colorSquare" style="background-color: #0000ff"></div>
+            <div class="colorSquare" style="background-color: rgb(167, 0, 167)"></div>
+            <div class="colorSquare" style="background-color: lightgray"></div>
+
+            <div class="colorSquare" style="background-color: darkred"></div>
+            <div class="colorSquare" style="background-color: orangered"></div>
+            <div class="colorSquare" style="background-color: rgb(255, 225, 0)"></div>
+            <div class="colorSquare" style="background-color: green"></div>
+            <div class="colorSquare" style="background-color: rgb(56, 83, 255)"></div>
+            <div class="colorSquare" style="background-color: #00009b"></div>
+            <div class="colorSquare" style="background-color: indigo"></div>
+
         </div>
       </div>
     </div>

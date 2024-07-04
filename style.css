@@ -34,7 +34,7 @@ h1 {
   display: flex;
   flex-direction: column;
   background-color: white;
-  padding: 40px;
+  padding: 40px 40px 20px 40px;
   border-radius: 30px;
   width: fit-content;
 }
@@ -56,9 +56,10 @@ h1 {
 }
 
 .slider {
-  width: 100%;
+  width: 100px;
   height: 25px;
   background: #d3d3d3;
+  color: red;
   outline: none;
   opacity: 0.7;
   -webkit-transition: 0.2s;
@@ -69,6 +70,7 @@ h1 {
   display: flex;
   width: 100%;
   margin-top: 20px;
+  gap: 20px;
 }
 
 ul {
@@ -102,4 +104,19 @@ h2 {
   font-size: 1.5rem;
   margin-left: 20px;
   font-weight: bold;
+}
+
+.colors {
+  width: 256px;
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2px;
+}
+
+.colorSquare {
+  box-sizing: border-box;
+  border: solid 1px black;
+  width: 30px;
+  height: 50%;
 }

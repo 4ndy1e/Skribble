@@ -1,7 +1,7 @@
 // sketch container elements
 const sketchContainer = document.querySelector(".sketch-container");
-let width = sketchContainer.offsetWidth;
-let height = sketchContainer.offsetHeight;
+let width = sketchContainer.offsetWidth - 4;
+let height = sketchContainer.offsetHeight - 4;
 console.log(width);
 console.log(height);
 
@@ -11,7 +11,7 @@ let squaresTotal = 64;
 // generate pixels 
 function generatePixels() {
   let squareWidthHeight = width / squaresTotal;
-  console.log("WIDTH: " + squareWidthHeight);
+  console.log("SQAURE WIDTH: " + squareWidthHeight);
 
   // Create and append squares to the container
   for(let i = 0; i < squaresTotal * squaresTotal; i++) {

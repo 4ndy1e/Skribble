@@ -1,24 +1,48 @@
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 98vw;
+  height: 99vh;
+  background-image: linear-gradient(
+    225deg,
+    #612d95 0%,
+    #9225ad 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+}
+
+h1 {
+  font-family: "Roboto";
+  font-weight: bold;
+  color: white;
+  margin: 10px 0px 0px 30px;
+  font-size: 40px;
+  text-align: center;
+}
+.sketch-body {
   display: flex;
-  align-items: center;
-  flex-direction: column;
-  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  margin-top: 50px;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.header-section {
+  display: flex;
+  justify-content: space-between;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   background-color: white;
-  padding: 50px;
-  border-radius: 20px;
+  padding: 40px;
+  border-radius: 30px;
+  width: fit-content;
 }
 
 .sketch-container {
   border: solid 2px lightgray;
-  width: 700px;
-  height: 700px;
+  width: 500px;
+  height: 500px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -44,4 +68,38 @@ body {
 .options {
   display: flex;
   width: 100%;
+  margin-top: 20px;
+}
+
+ul {
+  list-style: none;
+  color: white;
+  font-family: "Roboto";
+  font-size: 1.1rem;
+  font-weight: bold;
+  display: flex;
+  gap: 100px;
+  margin-right: 40px;
+}
+
+.description-container {
+  width: 40%;
+  font-family: "Roboto";
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h2 {
+  font-size: 75px;
+  font-weight: 900;
+  margin: 0px;
+  text-decoration: underline;
+}
+
+.description {
+  font-size: 1.5rem;
+  margin-left: 20px;
+  font-weight: bold;
 }

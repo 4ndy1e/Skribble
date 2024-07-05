@@ -2,8 +2,7 @@
 const sketchContainer = document.querySelector(".sketch-container");
 let width = sketchContainer.offsetWidth - 4;
 let height = sketchContainer.offsetHeight - 4;
-console.log(width);
-console.log(height);
+console.log(width); console.log(height);
 
 // generate pixels 
 let squaresTotal = 64;
@@ -21,8 +20,12 @@ function generatePixels() {
     square.style.height = `${squareWidthHeight}px`;
     square.classList.add("square");
 
+    // drawing effect
     square.addEventListener("mouseover", () => {
       if(leftClick == true) { square.style.backgroundColor = "black";}
+    });
+    square.addEventListener("mouseup", () => {
+      square.style.backgroundColor = "black";
     });
 
     sketchContainer.appendChild(square);
@@ -43,19 +46,15 @@ sketchContainer.addEventListener("mouseup", () => {
   console.log(leftClick);
 });
 
-// create drawing effect 
-const pixel = document.querySelectorAll(".square");
-
-pixel.forEach(square => {
-  square.addEventListener("mousedown", () => {
-    square.style.backgroundColor = "black";
-  })
+function detectDrawing() {
   square.addEventListener("mouseover", () => {
-    if(leftClick == true) {
-      square.style.backgroundColor = "black";
-    }
+    if(leftClick == true) { square.style.backgroundColor = "black";}
   });
-});
+  square.addEventListener("mouseup", () => {
+    square.style.backgroundColor = "black";
+  });
+}
+
 
 // pixels count
 const slider = document.querySelector("#slider");
@@ -74,5 +73,7 @@ slider.addEventListener("mouseup", () => {
   generatePixels();
   pixels.textContent = `${pixelsCount}px`
 });
+
+
 
 

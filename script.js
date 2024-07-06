@@ -75,6 +75,13 @@ colorSquares.forEach(colorSquare => {
   });
 });
 
+// trash drawing
+const trash = document.querySelector(".trash");
+trash.addEventListener("mouseup", () => {
+  sketchContainer.replaceChildren();
+  generatePixels();
+})
+
 
 
 

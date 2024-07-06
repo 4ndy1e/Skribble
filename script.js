@@ -22,17 +22,17 @@ function generatePixels() {
 
     // drawing effect
     square.addEventListener("mouseover", () => {
-      if(leftClick == true) { square.style.backgroundColor = "black";}
+      if(leftClick == true) { square.style.backgroundColor = currentColor.style.backgroundColor;}
     });
     square.addEventListener("mouseup", () => {
-      square.style.backgroundColor = "black";
+      square.style.backgroundColor = currentColor.style.backgroundColor;
     });
 
     sketchContainer.appendChild(square);
   }
 }
 
-// initial generation
+// initial generation of pixels
 generatePixels();
 
 // detect left click
@@ -66,6 +66,7 @@ slider.addEventListener("mouseup", () => {
 
 // Color changer
 const currentColor = document.querySelector(".currentColor");
+currentColor.style.backgroundColor = "black";
 let colorSquares = document.querySelectorAll(".colorSquare");
 colorSquares.forEach(colorSquare => {
   colorSquare.addEventListener("mousedown", () => {
@@ -73,6 +74,7 @@ colorSquares.forEach(colorSquare => {
     currentColor.style.backgroundColor = `${colorSquare.style.backgroundColor}`;
   });
 });
+
 
 
 

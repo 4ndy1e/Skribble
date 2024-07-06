@@ -20,7 +20,7 @@ h1 {
 }
 .sketch-body {
   display: flex;
-  margin-top: 50px;
+  margin-top: 20px;
   width: 100%;
   justify-content: space-evenly;
 }
@@ -41,8 +41,8 @@ h1 {
 
 .sketch-container {
   border: solid 2px lightgray;
-  width: 500px;
-  height: 500px;
+  width: 550px;
+  height: 550px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
@@ -70,7 +70,7 @@ h1 {
   display: flex;
   width: 100%;
   margin-top: 20px;
-  gap: 10px;
+  gap: 15px;
 }
 
 ul {

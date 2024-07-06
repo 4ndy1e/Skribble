@@ -131,3 +131,18 @@ h2 {
   background-color: black;
   border: solid 1px black;
 }
+
+.trash {
+  box-sizing: border-box;
+  aspect-ratio: 1 / 1;
+  height: 60px;
+  margin-left: 20px;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.trash:hover {
+  background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  border: solid 1px black;
+  cursor: pointer;
+}

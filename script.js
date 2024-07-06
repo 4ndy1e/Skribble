@@ -46,16 +46,6 @@ sketchContainer.addEventListener("mouseup", () => {
   console.log(leftClick);
 });
 
-function detectDrawing() {
-  square.addEventListener("mouseover", () => {
-    if(leftClick == true) { square.style.backgroundColor = "black";}
-  });
-  square.addEventListener("mouseup", () => {
-    square.style.backgroundColor = "black";
-  });
-}
-
-
 // pixels count
 const slider = document.querySelector("#slider");
   let sliderValue;
@@ -72,6 +62,16 @@ slider.addEventListener("mouseup", () => {
   // Generate pixels with the new slider value
   generatePixels();
   pixels.textContent = `${pixelsCount}px`
+});
+
+// Color changer
+const currentColor = document.querySelector(".currentColor");
+let colorSquares = document.querySelectorAll(".colorSquare");
+colorSquares.forEach(colorSquare => {
+  colorSquare.addEventListener("mousedown", () => {
+    console.log(colorSquare.style.backgroundColor);
+    currentColor.style.backgroundColor = `${colorSquare.style.backgroundColor}`;
+  });
 });
 
 

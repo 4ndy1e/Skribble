@@ -120,6 +120,11 @@ h2 {
   height: 50%;
 }
 
+.colorSquare:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
 .currentColor {
   aspect-ratio: 1 / 1;
   height: 100%;

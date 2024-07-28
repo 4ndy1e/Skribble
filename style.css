@@ -1,7 +1,7 @@
 body {
   width: 98vw;
   height: 99vh;
-  background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+  background-color: rgb(22, 22, 22);
 }
 
 h1 {
